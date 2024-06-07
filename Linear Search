@@ -1,0 +1,105 @@
+# ...for simple Array:  Linear search  :
+
+A> code:...............Searching..manually providing data.......................
+
+public class LinearSearch{
+    public static void main(String[] args){
+    int arr[] = {4,6,5,7};
+    int target = 6;
+    boolean found = false ;
+    for(int i = 0;i<arr.length;i++)
+    {System.out.print(arr[i]);}
+    System.out.println();
+    for(int i =0;i<arr.length;i++)
+    {if(arr[i] == target)
+    {System.out.println("Element"+target+"at index:"+i);
+    found = true ;
+    break ;}}
+    if(!found )
+    {System.out.println("target not found");
+}
+}}
+
+ .##..output
+                      4657
+                      Element6at index:1
+
+B> code:...............Searchin by Takking data from user.......................
+
+import java.util.Scanner;
+
+public class LinearSearch{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        System.out.println("eneter the L: ");
+    int l = s.nextInt();
+            System.out.println("enter target: ");
+
+    int target = s.nextInt();
+    boolean found = false ;
+    int arr[] = new int[l];
+            System.out.println("enter the array: ");
+
+    for(int i =0; i<l;i++)
+    {arr[i] = s.nextInt();}
+    for(int i = 0 ; i<l;i++)
+    {if(arr[i]== target)
+    {System.out.println("target index is :"+i);
+        found = true ;
+        break;}
+    }
+    if(!found)
+    {System.out.println("target not found ");}}}
+
+   .##..output
+                            eneter the L: 
+                            3
+                            enter target: 
+                            5
+                            enter the array: 
+                            1 4 7
+                            target not found 
+
+
+# ...for 2D Array:  Linear search  :
+B> code:...............Searchin 2D Array by Takking data from user.......................
+
+
+import java.util.Scanner;
+public class Searching{
+    public static void main(String[] args)
+    {Scanner s = new Scanner(System.in);
+    System.out.println("Enter the target : ");
+    int target = s.nextInt();
+    
+      System.out.println("Enter the r and c : ");
+    int r = s.nextInt();
+    int c = s.nextInt();
+    
+    boolean found = false; 
+      System.out.println("Enter the elements : ");
+    int[][] arr = new int[r][c];
+    for(int i = 0;i<r;i++)
+    {for(int j = 0;j<c;j++)
+    {arr[i][j] = s.nextInt();}}
+    
+  
+    for(int i = 0;i<r;i++)
+    {for(int j = 0;j<c;j++)
+    {if(arr[i][j] == target)
+       {System.out.println("target is at"+ i+" "+j); 
+       found = true ;
+       break;
+    }}
+       if(found)
+       {break ;}
+    }
+    if(!found)
+    {System.out.println("Targe not found ");}
+    
+}}
+
+
+
+
+
